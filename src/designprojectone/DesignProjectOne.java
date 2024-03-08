@@ -28,13 +28,13 @@ import java.text.*;
   
 /**************** TEST CASES ************************
 *Test   Input (numArduino, numRPI, numVR)  Desired Output
+*       9, 23, 2                           "The cost per participating student is $61.94"
 *       15, 20, 65                         "The cost per participating student is $67.50"
 *       0, 0, 0                            "There are no students participating in the science fair"
 *       -1, 42, 28                         "Please enter valid input (positive integers)"
-*
-*
-*
-*
+*       100, 3, 1                          "The cost per participating student is $56.78"
+*       16, 21, 9                          "The cost per participating student is $62.52"
+*       1, 3, 2                            "The cost per participating student is $65.83"
 ***************************************************/
 public class DesignProjectOne {
 
@@ -78,7 +78,7 @@ public class DesignProjectOne {
   if (totalStudents != 0) {
       //calculate total fixed cost for all students
     if (totalStudents > 100) {
-        totalFixedCost = totalStudents*FIXED_COST*DISCOUNT;
+        totalFixedCost = totalStudents*FIXED_COST*(1-DISCOUNT);
     } else {
         totalFixedCost = totalStudents*FIXED_COST;
     }
